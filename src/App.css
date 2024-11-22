@@ -1,38 +1,296 @@
-.App {
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout Styling */
+header img {
+  height: 50px;
+}
+
+/* Navigation Styling */
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #F4CE14; /* Highlight color on hover */
+}
+
+.navbar{
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar{
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+/* Main Content Styling */
+main {
+  min-height: 60vh;
+}
+
+
+.menu-icon{
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links.visible{
+  flex-direction: column;
+  position: absolute;
+  top: 78px;
+  right: 0;
+  width: 100%;
+  background-color: #495E57;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffa500;
+}
+
+.hero{
+  background-color: #495E57;
+  padding: 40px 13%;
+  position: relative;
+  color: #EDEFEE
+}
+
+h2{
+  color: #F4CE14;
+  font-size: 40px;
+}
+
+.menu-container h2{
+  color: #000;
+  font-size: 28px;
+}
+
+h3{
+  font-size: 25px;
+}
+
+button{
+  background-color: #F4CE14;
+  color: #000;
+  padding: 14px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner p{
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.banner{
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.banner-img{
+  position: absolute;
+  right: 13%;
+  top: 15%;
+  width: 400px;
+}
+
+.banner-img img{
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.form{
+  padding: 10px 13%;
+}
+
+input, label{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#book-date{
+  background: #bdbdbd43;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.btnReceive input{
+  padding: 12px 16px;
+  margin-top: 20px;
+  background: #495E57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.btnReceive{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.menu-container{
+  margin: 110px auto;
+  padding: 10px 13%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.orderBtn{
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+}
+
+.menu-items{
+  border-radius: 8px;
+  width: 310px;
+  background: #495E57;
+  overflow: hidden;
+}
+
+.menu-items img{
+  width: 100%;
+  height: auto;
+}
+
+.menu-content{
+  padding: 5px 15px;
+}
+
+.menu-content .heading{
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-info img{
+  margin-top: 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.company-info p{
+  width: 320px;
+}
+
+footer section{
+  padding: 10px 13%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+footer h3{
+  font-size: 18px;
+}
+
+footer ul{
+  padding: 0;
+}
+
+footer ul li{
+  padding: 8px 0;
+}
+
+.form-section{
+  background-color: #fff;
+  padding-bottom: 4%;
+  padding-top: 4%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 74%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.form-section h1{
+  color: #495E57;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px){
+  .menu-icon{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links{
+    display: none;
   }
+
+  .nav-links.visible{
+    display: flex;
+    background: #333333;
+    z-index: 1000;
+    padding: 20px 0;
+
+  }
+
+  nav ul li a{
+    color: #fff;
+  }
+
+  .bar{background: #333333;}
 }

@@ -1,16 +1,21 @@
 import './App.css';
 import React from 'react';
-import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import Main from './components/Main';
+import Footer from './components/Footer'
+import BookingPage from './components/BookingPage';
+import Hero from './components/Hero';
+import BookingForm from './components/BookingForm';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <>
-      <Header />
+    <>   
       <Nav />
-      <Main />
+      <Main/>
+      <Menu />
       <Footer />
     </>
   );
